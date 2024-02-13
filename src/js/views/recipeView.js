@@ -1,54 +1,32 @@
+// we will import the parent View class 
+import View from './view.js'
+
 //import icon from '../img/icons.svg'; // Parcel 1
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 // var Fraction = require('fractional').Fraction // old way of importing
 import { Fraction } from 'fractional';
-console.log(Fraction);
+// console.log(Fraction);
 
 // in the recipeView.js file, we will create a class called RecipeView that will be responsible for rendering the recipe details to the UI.
 // We will also create a method called render that will render the recipe details to the UI.
 
-class recipeView {
-    #data;
+class recipeView extends View {
 
-    #parentElement = document.querySelector('.recipe');
+  _parentElement = document.querySelector('.recipe');
+  _errorMessage = 'We could not find that recipe. Please try another one!';
+  _message = '';
 
-    // we will create a method called render that will render the recipe details to the UI
-    // the data that will be coming in the render method will be stored in the data of the instance of the class
-    render(data) {
-        this.#data = data;
-        // now we will call the generateMarkup method to generate the markup for the recipe details
-        // since the generateMarkup method will return the markup for the recipe details, we will store the markup in a variable
-        const markup = this.#generateMarkup();
-        // now we will clear the parentElement
-        this.#parentElement.innerHTML = '';
-        // now we will insert the markup into the parentElement
-        this.#parentElement.insertAdjacentHTML('afterbegin', markup);
 
-    }
 
-    renderSpinner = function () {
-        const markup = ` 
-    <div class="spinner">
-              <svg>
-                <use href="${icons}#icon-loader"></use>
-              </svg>
-            </div> 
-            `;
-        this.clear();
-        this.#parentElement.insertAdjacentHTML('afterbegin', markup);
-    }
 
-    clear() {
-        this.#parentElement.innerHTML = '';
-    }
 
-    // we will create a method called generateMarkup that will generate the markup for the recipe details
-    // this method will return the markup for the recipe details
-    #generateMarkup() {
-        return `<figure class="recipe__fig">
-        <img src="${this.#data.image}" alt="${this.#data.title}" class="recipe__img" />
+  // we will create a method called generateMarkup that will generate the markup for the recipe details
+  // this method will return the markup for the recipe details
+  _generateMarkup() {
+    return `<figure class="recipe__fig">
+        <img src="${this._data.image}" alt="${this._data.title}" class="recipe__img" />
         <h1 class="recipe__title">
-          <span>${this.#data.title}</span>
+          <span>${this._data.title}</span>
         </h1>
       </figure>
 
@@ -57,14 +35,14 @@ class recipeView {
           <svg class="recipe__info-icon">
             <use href="${icons}#icon-clock"></use>
           </svg>
-          <span class="recipe__info-data recipe__info-data--minutes">${this.#data.cookingTime}</span>
+          <span class="recipe__info-data recipe__info-data--minutes">${this._data.cookingTime}</span>
           <span class="recipe__info-text">minutes</span>
         </div>
         <div class="recipe__info">
           <svg class="recipe__info-icon">
             <use href="${icons}#icon-users"></use>
           </svg>
-          <span class="recipe__info-data recipe__info-data--people">${this.#data.servings}</span>
+          <span class="recipe__info-data recipe__info-data--people">${this._data.servings}</span>
           <span class="recipe__info-text">servings</span>
 
           <div class="recipe__info-buttons">
@@ -82,9 +60,7 @@ class recipeView {
         </div>
 
         <div class="recipe__user-generated">
-          <svg>
-            <use href="${icons}#icon-user"></use>
-          </svg>
+
         </div>
         <button class="btn--round">
           <svg class="">
@@ -97,7 +73,7 @@ class recipeView {
         <h2 class="heading--2">Recipe ingredients</h2>
         <ul class="recipe__ingredient-list">
 
-        ${this.#data.ingredients.map(this.#generateMarkupIngredient).join('')}
+        ${this._data.ingredients.map(this._generateMarkupIngredient).join('')}
 
           <li class="recipe__ingredient">
             <svg class="recipe__icon">
@@ -116,12 +92,12 @@ class recipeView {
         <h2 class="heading--2">How to cook it</h2>
         <p class="recipe__directions-text">
           This recipe was carefully designed and tested by
-          <span class="recipe__publisher">${this.#data.publisher}</span>. Please check out
+          <span class="recipe__publisher">${this._data.publisher}</span>. Please check out
           directions at their website.
         </p>
         <a
           class="btn--small recipe__btn"
-          href="${this.#data.sourceUrl}"
+          href="${this._data.sourceUrl}"
           target="_blank"
         >
           <span>Directions</span>
@@ -130,20 +106,16 @@ class recipeView {
           </svg>
         </a>
       </div>`;
-    }
+  }
 
-    #generateMarkupIngredient(ing) {
-        return `<li class="recipe__ingredient">
-                <svg class="recipe__icon">
-                    <use href="${icons}#icon-check"></use>
-                </svg>
-                <div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity).toString() : ''}</div>
-                <div class="recipe__description">
-                    <span class="recipe__unit">${ing.unit}</span>
-                    ${ing.description}
-                </div>
-            </li>`
-    }
+  // we are creating a publisher-subscriber pattern here
+  // we are creating a public method called addHandlerRender that will take a handler as a parameter
+  // the handler will be a function that will be called when the hash changes which will be the showRecipe function
+
+  addHandlerRender(handler) {
+    const eventArray = ['hashchange', 'load'];
+    eventArray.forEach(ev => window.addEventListener(ev, handler));
+  }
 }
 
 // we will not export the whole class, we will export the instance of the class

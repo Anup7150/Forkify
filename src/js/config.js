@@ -2,5 +2,5 @@
 // basically we are setting the configuration for the application in one place
 // for example, we can use the variables those are constant and never change in the application
 
-export const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes';
+export const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
 export const TIMEOUT_SEC = 10;
