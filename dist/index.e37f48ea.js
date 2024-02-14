@@ -594,6 +594,8 @@ var _searchViewJs = require("./views/searchView.js");
 var _searchViewJsDefault = parcelHelpers.interopDefault(_searchViewJs);
 var _resultViewJs = require("./views/resultView.js");
 var _resultViewJsDefault = parcelHelpers.interopDefault(_resultViewJs);
+var _paginationViewJs = require("./views/paginationView.js");
+var _paginationViewJsDefault = parcelHelpers.interopDefault(_paginationViewJs);
 var _runtime = require("regenerator-runtime/runtime");
 // console.log(icons);
 // const recipeContainer = document.querySelector('.recipe');
@@ -649,12 +651,18 @@ const showRecipe = async function() {
 const controlSearchResults = async function() {
     try {
         // get the query from the search input
+        // 1. get the query from the search input
         const query = (0, _searchViewJsDefault.default).getQuery();
         if (!query) return;
         (0, _resultViewJsDefault.default).renderSpinner();
+        // 2. load the search results
         await _modelJs.loadSearchResults(`${query}`);
+        // 3. render the search results
         // console.log(model.state.search.results);
-        (0, _resultViewJsDefault.default).render(_modelJs.state.search.results);
+        //resultView.render(model.state.search.results);
+        (0, _resultViewJsDefault.default).render(_modelJs.getResultsPage());
+        // 4. render the initial pagination buttons
+        (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
     } catch (err) {
         console.error(err);
     }
@@ -671,13 +679,22 @@ const controlSearchResults = async function() {
 // we are calling the addHandlerRender method from the recipeView instance and passing the showRecipe function as a parameter
 // the showRecipe function will be used as callback function in the addHandlerRender method in the recipeView.js file
 // recipeView.addHandlerRender(showRecipe)
+// here we will create a different function to handle the pagination buttons
+// here we are using the goToPage parameter which will be coming from the paginationView.js addHandlerClick method
+const controlPagination = function(goToPage) {
+    // render the new results
+    // console.log(goToPage);
+    (0, _resultViewJsDefault.default).render(_modelJs.getResultsPage(goToPage));
+    (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
+};
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(showRecipe);
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
+    (0, _paginationViewJsDefault.default).addHandlerClick(controlPagination);
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","./views/paginationView.js":"6z7bi","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -1915,6 +1932,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
+parcelHelpers.export(exports, "getResultsPage", ()=>getResultsPage);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
@@ -1922,7 +1940,9 @@ const state = {
     recipe: {},
     search: {
         query: "",
-        results: []
+        results: [],
+        resultsPerPage: (0, _configJs.RES_PER_PAGE),
+        page: 1
     }
 };
 const loadRecipe = async function(id) {
@@ -1971,6 +1991,17 @@ const loadSearchResults = async function(query) {
         console.error(err);
         throw err;
     }
+};
+const getResultsPage = function(page = state.search.page) {
+    // since we arleady have the search results and we only want to display certain amount of results per page
+    // we will use the slice method to slice the search results array
+    // we will store the value of page that is comming in the parameter in a variable called page
+    // because we will use it to calculate the number of page
+    state.search.page = page;
+    const start = (page - 1) * state.search.resultsPerPage;
+    const end = page * state.search.resultsPerPage;
+    // console.log(start, end);
+    return state.search.results.slice(start, end);
 } // loadSearchResults('pizza');
 ;
 
@@ -2567,8 +2598,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
 parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
+parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
 const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes/";
 const TIMEOUT_SEC = 10;
+const RES_PER_PAGE = 10;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -3163,15 +3196,83 @@ class ResultView extends (0, _viewJsDefault.default) {
                 <div class="preview__data">
                     <h4 class="preview__title">${result.title}</h4>
                     <p class="preview__publisher">${result.publisher}</p>
-                    <div class="preview__user-generated">
-                      
-                    </div>
+
                 </div>
             </a>
         </li>`;
     }
 }
 exports.default = new ResultView();
+
+},{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6z7bi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewJs = require("./view.js");
+var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+class PaginationView extends (0, _viewJsDefault.default) {
+    _parentElement = document.querySelector(".pagination");
+    // here lets create a publisher-subscriber pattern to handle the event of the pagination buttons
+    addHandlerClick(handler) {
+        // here we cannot pass the handler function directly to the addEventListener method
+        // because we want to listen the click either on the next or the previous button
+        this._parentElement.addEventListener("click", function(e) {
+            // for that we can use page delegation to listen to the click event on the parent element
+            const btn = e.target.closest(".btn--inline");
+            if (!btn) return;
+            const goToPage = +btn.dataset.goto;
+            // now since we have got the page number from the dataset of the button
+            // we will send it back to the controller so that it can be used to load the results based on that number using some method
+            handler(goToPage);
+        });
+    }
+    // lets create a function to generate the markup for the pagination buttons
+    _generateMarkup() {
+        const currentPage = this._data.page;
+        // console.log(this._data);
+        // we will use the search object coming from the state object to check if there are other pages
+        const numberOfPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+        // console.log(numberOfPages);
+        // 1. we are in the first page and there are other pages
+        if (currentPage === 1 && numberOfPages > 1) // here we are using the custom data attribute to make connection between DOM and our code
+        // basically we are using the data-goto attribute to store the page number which we will use later on addHandlerClick method to get the page number
+        return `
+            <button data-goto = "${currentPage + 1}" class="btn--inline pagination__btn--next">
+            <span>Page ${currentPage + 1}</span>
+            <svg class="search__icon">
+              <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+            </svg>
+          </button>`;
+        // 2. we are in the last page and there are other pages
+        if (currentPage === numberOfPages && numberOfPages > 1) return `
+            <button data-goto = "${currentPage - 1}"  class="btn--inline pagination__btn--prev">
+            <svg class="search__icon">
+              <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+            </svg>
+            <span>Page ${currentPage - 1}</span>
+          </button>`;
+        // 3. we are in other page
+        if (currentPage < numberOfPages) return `
+            <button data-goto = "${currentPage - 1}" class="btn--inline pagination__btn--prev">
+            <svg class="search__icon">
+              <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+            </svg>
+            <span>Page ${currentPage - 1}</span>
+          </button>
+          
+          <button data-goto = "${currentPage + 1}" class="btn--inline pagination__btn--next">
+          <span>Page ${currentPage + 1}</span>
+          <svg class="search__icon">
+            <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+          </svg>
+        </button>
+          `;
+        // 4. we are in the first page and there are no other pages
+        return "";
+    }
+}
+exports.default = new PaginationView();
 
 },{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["f0HGD","aenu9"], "aenu9", "parcelRequire3a11")
 

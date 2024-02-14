@@ -1,6 +1,7 @@
 import { async } from 'regenerator-runtime';
-import { API_URL } from './config.js';
+import { API_URL, RES_PER_PAGE } from './config.js';
 import { getJSON } from './helpers.js';
+
 
 // state is an object that will store all the data that we need to in the application
 // we will store the recipe data in the state object
@@ -8,8 +9,12 @@ export const state = {
     recipe: {},
     search: {
         query: '',
-        results: []
-    }
+        results: [],
+        resultsPerPage: RES_PER_PAGE,
+        page: 1, // we will store the page 1 as default page
+    },
+    // since this number is constant and will never change, we will store it in the config file
+    // numberPerPage: 10,
 }
 
 // now we will create a function to get the recipe from the api
@@ -69,6 +74,23 @@ export const loadSearchResults = async function (query) {
         console.error(err);
         throw err;
     }
+}
+
+// here we will create a function to get the search results for the pagination feature
+// the logic for the pagination feature will be implemented in the model because the model is the place where we store the data
+// the function will take the page as a parameter
+
+export const getResultsPage = function (page = state.search.page) {
+    // since we arleady have the search results and we only want to display certain amount of results per page
+    // we will use the slice method to slice the search results array
+    // we will store the value of page that is comming in the parameter in a variable called page
+    // because we will use it to calculate the number of page
+    state.search.page = page;
+    const start = (page - 1) * state.search.resultsPerPage;
+    const end = page * state.search.resultsPerPage;
+
+    // console.log(start, end);
+    return state.search.results.slice(start, end);
 }
 
 // loadSearchResults('pizza');

@@ -5,7 +5,9 @@ import recipeView from './views/recipeView.js';
 
 import searchView from './views/searchView.js';
 
-import ResultView from './views/resultView.js';
+import resultView from './views/resultView.js';
+
+import paginationView from './views/paginationView.js';
 
 
 
@@ -87,14 +89,22 @@ const showRecipe = async function () {
 const controlSearchResults = async function () {
     try {
         // get the query from the search input
+        // 1. get the query from the search input
         const query = searchView.getQuery();
         if (!query) return;
 
-        ResultView.renderSpinner();
+        resultView.renderSpinner();
 
+        // 2. load the search results
         await model.loadSearchResults(`${query}`);
+
+        // 3. render the search results
         // console.log(model.state.search.results);
-        ResultView.render(model.state.search.results);
+        //resultView.render(model.state.search.results);
+        resultView.render(model.getResultsPage());
+
+        // 4. render the initial pagination buttons
+        paginationView.render(model.state.search)
 
     } catch (err) {
         console.error(err);
@@ -117,9 +127,20 @@ const controlSearchResults = async function () {
 // the showRecipe function will be used as callback function in the addHandlerRender method in the recipeView.js file
 // recipeView.addHandlerRender(showRecipe)
 
+// here we will create a different function to handle the pagination buttons
+// here we are using the goToPage parameter which will be coming from the paginationView.js addHandlerClick method
+const controlPagination = function (goToPage) {
+    // render the new results
+    // console.log(goToPage);
+    resultView.render(model.getResultsPage(goToPage));
+    paginationView.render(model.state.search)
+
+}
+
 const init = function () {
     recipeView.addHandlerRender(showRecipe);
     searchView.addHandlerSearch(controlSearchResults);
+    paginationView.addHandlerClick(controlPagination);
 }
 init();
 // this is the event listener for the hashchange event which is fired when the hash of the url changes
