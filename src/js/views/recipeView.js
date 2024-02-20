@@ -46,12 +46,12 @@ class recipeView extends View {
           <span class="recipe__info-text">servings</span>
 
           <div class="recipe__info-buttons">
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${this._data.servings - 1}">
               <svg>
                 <use href="${icons}#icon-minus-circle"></use>
               </svg>
             </button>
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${this._data.servings + 1}" >
               <svg>
                 <use href="${icons}#icon-plus-circle"></use>
               </svg>
@@ -62,9 +62,9 @@ class recipeView extends View {
         <div class="recipe__user-generated">
 
         </div>
-        <button class="btn--round">
+        <button class="btn--round btn--bookmark">
           <svg class="">
-            <use href="${icons}#icon-bookmark-fill"></use>
+            <use href="${icons}#icon-bookmark${this._data.bookmarked ? "-fill" : ''}"></use>
           </svg>
         </button>
       </div>
@@ -116,6 +116,32 @@ class recipeView extends View {
     const eventArray = ['hashchange', 'load'];
     eventArray.forEach(ev => window.addEventListener(ev, handler));
   }
+
+  // here we are creating the handler function for the serving buttons
+  // this function will be called when the user clicks the serving buttons
+  addHandlerUpdateServings(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest(`.btn--update-servings`);
+      if (!btn) return;
+      // we are getting the value of the data-update-to attribute from the button to update the servings
+      const { updateTo } = btn.dataset;
+      // here we are checking the condition and sending the value to the controller so that it can send to model and model can upate the servings
+      if (+updateTo > 0) handler(+updateTo);
+      // console.log(btn);
+      // handler();
+    })
+  }
+
+  // here we are creating the handler function for the bookmark feature
+  // simply we will use the event Delegation here
+  addHandlerBookmark(handler) {
+    this._parentElement.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn--bookmark');
+      if (!btn) return;
+      handler();
+    })
+  }
+
 }
 
 // we will not export the whole class, we will export the instance of the class

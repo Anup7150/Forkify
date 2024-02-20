@@ -596,6 +596,10 @@ var _resultViewJs = require("./views/resultView.js");
 var _resultViewJsDefault = parcelHelpers.interopDefault(_resultViewJs);
 var _paginationViewJs = require("./views/paginationView.js");
 var _paginationViewJsDefault = parcelHelpers.interopDefault(_paginationViewJs);
+var _bookmarksViewJs = require("./views/bookmarksView.js");
+var _bookmarksViewJsDefault = parcelHelpers.interopDefault(_bookmarksViewJs);
+var _addRecipeViewJs = require("./views/addRecipeView.js");
+var _addRecipeViewJsDefault = parcelHelpers.interopDefault(_addRecipeViewJs);
 var _runtime = require("regenerator-runtime/runtime");
 // console.log(icons);
 // const recipeContainer = document.querySelector('.recipe');
@@ -621,28 +625,35 @@ var _runtime = require("regenerator-runtime/runtime");
 const showRecipe = async function() {
     // loading the recipe
     try {
-        // rendering the spinner
-        (0, _recipeViewJsDefault.default).renderSpinner();
         // getting the hash from the url
         const id = window.location.hash.slice(1); // here the location is the browser location and the hash is the hash of the url
         // and we are slicing the hash from the url to get the id of the recipe
         // console.log(id);
         // if there is no id in the url, we return from the function by using the guard clause
         if (!id) return;
-        // loading the recipe
+        // 0. update results view to mark selected search result
+        (0, _resultViewJsDefault.default).update(_modelJs.getResultsPage());
+        //1. rendering the spinner
+        (0, _recipeViewJsDefault.default).renderSpinner();
+        // 0. update the view to mark the selected search result
+        //2. loading the recipe
         // we are calling the loadRecipe function from the model.js file and passing the id as a parameter
         // since the loadRecipe function is an async function, we can use the await keyword to wait for the promise to be resolved
         await _modelJs.loadRecipe(id);
-        // rendering the recipe
+        //3. rendering the recipe
         // here we are rendering the recipe to the UI by calling the render method from the recipeView instance
         // and passing the recipe as a parameter
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
+        // debugger;
+        //4. updating the bookmarks view
+        (0, _bookmarksViewJsDefault.default).update(_modelJs.state.bookmark);
     } catch (err) {
         // console.error(err);
         // we should not set the error message in the controller here
         // instead we will set the error message in the view because the error mesasage will be rendered to the UI
         // we will only call the renderError method from the recipeView instance
         (0, _recipeViewJsDefault.default).renderError();
+        console.error(err); // here we are logging the error to the console
     }
 };
 // we will create a function for the search results feature
@@ -687,14 +698,64 @@ const controlPagination = function(goToPage) {
     (0, _resultViewJsDefault.default).render(_modelJs.getResultsPage(goToPage));
     (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
 };
+// here now we will create a handler function for the serving buttons
+// basically this function is to update the servings in the state object in the model
+const controlServings = function(newServings) {
+    // we will not directly update the servings in the state object from the controller
+    // we will create a method in the model to update the servings
+    //1. update the recipe servings (in state)
+    _modelJs.updateServings(newServings);
+    //2. updated the recipe view
+    // if we use the render method in here then it will update the whole page which is not good
+    // so what we can do is to only update the the elements that are changed
+    // recipeView.render(model.state.recipe)
+    // we will create this method  in the parent view that is the view.js file
+    (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe);
+};
+// here now we will create a controller function for the bookmark feature
+const controlBookmark = function() {
+    // console.log(!model.state.recipe.bookmarked);
+    // 1. add or remove the bookmark
+    // here if the recipe bookmarked property is true, we will add the recipe to the bookmark array in the state object
+    if (!_modelJs.state.recipe.bookmarked) _modelJs.addBookmark(_modelJs.state.recipe);
+    else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+    // console.log(model.state.recipe);
+    // 2. update the recipe view
+    // we need to update the recipe view when the recipe is bookmarked
+    // and we will pass the parameter that needs to be updated
+    (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe);
+    // 3. render the bookmarks view
+    // we will render the bookmarks view when the recipe is bookmarked
+    // the bookmarked recipe will be rendered on the bookmark panel
+    (0, _bookmarksViewJsDefault.default).render(_modelJs.state.bookmark); // here we are passing the bookmark array from the state object in the model to the render method in the bookmarksView instance
+};
+const controlBookmarks = function() {
+    (0, _bookmarksViewJsDefault.default).render(_modelJs.state.bookmark);
+};
+const controlAddRecipe = async function(newRecipe) {
+    try {
+        // we need to await the upload recipe method because it is an async function and it returns a promise
+        await _modelJs.uploadRecipe(newRecipe);
+    } // console.log(newRecipe);
+    catch (err) {
+        console.error("\uD83D\uDCA5", err);
+        (0, _addRecipeViewJsDefault.default).renderError(err.message);
+    }
+};
+// here we are connecting the handler function to the event listener or view
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(showRecipe);
+    (0, _recipeViewJsDefault.default).addHandlerUpdateServings(controlServings);
+    (0, _recipeViewJsDefault.default).addHandlerBookmark(controlBookmark);
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
     (0, _paginationViewJsDefault.default).addHandlerClick(controlPagination);
+    (0, _bookmarksViewJsDefault.default).addHandlerEvent(controlBookmarks);
+    (0, _addRecipeViewJsDefault.default).addHandlerFormSubmit(controlAddRecipe);
+// controlBookmark();
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","./views/paginationView.js":"6z7bi","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultView.js":"f70O5","./views/paginationView.js":"6z7bi","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/bookmarksView.js":"4Lqzq","./views/addRecipeView.js":"i6DNj"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -1933,6 +1994,10 @@ parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getResultsPage", ()=>getResultsPage);
+parcelHelpers.export(exports, "updateServings", ()=>updateServings);
+parcelHelpers.export(exports, "addBookmark", ()=>addBookmark);
+parcelHelpers.export(exports, "deleteBookmark", ()=>deleteBookmark);
+parcelHelpers.export(exports, "uploadRecipe", ()=>uploadRecipe);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
@@ -1943,7 +2008,8 @@ const state = {
         results: [],
         resultsPerPage: (0, _configJs.RES_PER_PAGE),
         page: 1
-    }
+    },
+    bookmark: []
 };
 const loadRecipe = async function(id) {
     try {
@@ -1961,7 +2027,12 @@ const loadRecipe = async function(id) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients
         };
-    // console.log(state.recipe);
+        // here we want to check if the recipe is bookmarked or not
+        // we can do that by checking the recipe id that is in the bookmark array with the recipe id in the state object
+        // if the id matches and the recipe is bokmarked, we will set the bookmarked property to true
+        // if the recipe is not bookmarked, we will set the bookmarked property to false
+        // we will use the some method of array to check the condition
+        state.bookmark.some((bookmark)=>bookmark.id === id ? state.recipe.bookmarked = true : state.recipe.bookmarked = false);
     } catch (err) {
         // since the error here doesnot belong in the model, we need to catch in show in the view
         // so we will re throw the error again so that we can catch it in the controller
@@ -1969,6 +2040,7 @@ const loadRecipe = async function(id) {
         console.error(err + "\uD83D\uDCA3\uD83D\uDCA3\uD83D\uDCA3\uD83D\uDCA3\uD83D\uDCA3");
         throw err;
     }
+// console.log(state.recipe);
 };
 const loadSearchResults = async function(query) {
     try {
@@ -1986,6 +2058,7 @@ const loadSearchResults = async function(query) {
                 image: rec.image_url
             };
         });
+        state.search.page = 1;
     // console.log(state.search.results);
     } catch (err) {
         console.error(err);
@@ -2002,8 +2075,73 @@ const getResultsPage = function(page = state.search.page) {
     const end = page * state.search.resultsPerPage;
     // console.log(start, end);
     return state.search.results.slice(start, end);
-} // loadSearchResults('pizza');
-;
+};
+const updateServings = function(newServing) {
+    // with the serving, we also need to update the ingredients quantity which is inside the ingredients array
+    // so we will loop through the ingredients array and update the quantity
+    state.recipe.ingredients.forEach((ing)=>{
+        // the logic here is that we will multiply the quantity of each ingredient by the new serving and divide it by the old serving
+        // this will give us the new quantity for each ingredient
+        const newQuantity = ing.quantity * newServing / state.recipe.servings;
+        ing.quantity = newQuantity;
+    });
+    // now we will update the servings in the state object
+    state.recipe.servings = newServing;
+};
+// now here we will create a function to add the bookmarked recipe in the local storage
+// simply we want to render the bookmarked recipe when the user refresh the page
+const persistBookmarks = function() {
+    localStorage.setItem("bookmarks", JSON.stringify(state.bookmark)); // here we are storing the bookmark array in the local storage as a string because the local storage can only store strings
+};
+const addBookmark = function(recipe) {
+    // here now we will add the incoming recipe to the bookmarks array
+    state.bookmark.push(recipe);
+    // now we if the recipe is bookmarked, we will render the recipe as the bookmarked recipe
+    // we can do that by comparing the incoming recipe id with the id of the recipe in the state object
+    // mark current recipe as bookmarked
+    if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+    // now we will store the bookmarked recipe in the local storage
+    persistBookmarks();
+};
+const deleteBookmark = function(id) {
+    // here we will find the index of the recipe in the which we want to remove from the bookmark array
+    // here we will use the findIndex method to find the index of the recipe in the bookmark array
+    //  the recipe we want to remove will be the recipe whose id matches the id that is coming in the parameter
+    const index = state.bookmark.findIndex((el)=>el.id === id); // it will return the index of the recipe whose id matches the id that is coming in the parameter
+    state.bookmark.splice(index, 1); // here the splice method will remove one element from the array
+    // mark current recipe as NOT bookmarked
+    if (id === state.recipe.id) state.recipe.bookmarked = false;
+    persistBookmarks();
+};
+const uploadRecipe = async function(newRecipe) {
+    try {
+        // 1. upload the new recipe data
+        // converting an oject to an array and then filtering the array with condition
+        const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith("ingredient") && entry[1] !== "").map((ing)=>{
+            const ingArr = ing[1].replaceAll(" ", "").split(",");
+            const [quantity, unit, description] = ingArr;
+            // now we will check a conditon
+            if (ingArr.length !== 3) throw new Error("Wrong ingredient format! Please use the correct format :)");
+            // we are returning an object with the properties we want from the ingredients array
+            // we will check a condition for the quantity
+            return {
+                quantity: quantity ? +quantity : null,
+                unit,
+                description
+            }; // 
+        });
+        console.log(ingredients);
+    } catch (err) {
+        // console.error('💣💣💣💣💣', err);
+        throw err;
+    }
+};
+// now here we will create a function to read the bookmarked recipe from the local storage
+const init = function() {
+    const storage = localStorage.getItem("bookmarks"); // here we are getting the bookmark array from the local storage as a string and we store it in the variable
+    if (storage) state.bookmark = JSON.parse(storage);
+};
+init(); // loadSearchResults('pizza');
 
 },{"regenerator-runtime":"dXNgZ","./config.js":"k5Hzs","./helpers.js":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXNgZ":[function(require,module,exports) {
 /**
@@ -2707,12 +2845,12 @@ class recipeView extends (0, _viewJsDefault.default) {
           <span class="recipe__info-text">servings</span>
 
           <div class="recipe__info-buttons">
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${this._data.servings - 1}">
               <svg>
                 <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
               </svg>
             </button>
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to = "${this._data.servings + 1}" >
               <svg>
                 <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
               </svg>
@@ -2723,9 +2861,9 @@ class recipeView extends (0, _viewJsDefault.default) {
         <div class="recipe__user-generated">
 
         </div>
-        <button class="btn--round">
+        <button class="btn--round btn--bookmark">
           <svg class="">
-            <use href="${0, _iconsSvgDefault.default}#icon-bookmark-fill"></use>
+            <use href="${0, _iconsSvgDefault.default}#icon-bookmark${this._data.bookmarked ? "-fill" : ""}"></use>
           </svg>
         </button>
       </div>
@@ -2778,6 +2916,29 @@ class recipeView extends (0, _viewJsDefault.default) {
         ];
         eventArray.forEach((ev)=>window.addEventListener(ev, handler));
     }
+    // here we are creating the handler function for the serving buttons
+    // this function will be called when the user clicks the serving buttons
+    addHandlerUpdateServings(handler) {
+        this._parentElement.addEventListener("click", function(e) {
+            const btn = e.target.closest(`.btn--update-servings`);
+            if (!btn) return;
+            // we are getting the value of the data-update-to attribute from the button to update the servings
+            const { updateTo } = btn.dataset;
+            // here we are checking the condition and sending the value to the controller so that it can send to model and model can upate the servings
+            if (+updateTo > 0) handler(+updateTo);
+        // console.log(btn);
+        // handler();
+        });
+    }
+    // here we are creating the handler function for the bookmark feature
+    // simply we will use the event Delegation here
+    addHandlerBookmark(handler) {
+        this._parentElement.addEventListener("click", function(e) {
+            const btn = e.target.closest(".btn--bookmark");
+            if (!btn) return;
+            handler();
+        });
+    }
 }
 // we will not export the whole class, we will export the instance of the class
 // so that we can use the instance of the class in the controller.js file instead of creating a new instance of the class
@@ -2792,16 +2953,59 @@ class View {
     _data;
     // we will create a method called render that will render the recipe details to the UI
     // the data that will be coming in the render method will be stored in the data of the instance of the class
-    render(data) {
+    render(data, render = true) {
         this._data = data;
         if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         // now we will call the generateMarkup method to generate the markup for the recipe details
         // since the generateMarkup method will return the markup for the recipe details, we will store the markup in a variable
         const markup = this._generateMarkup();
+        // if render is false, we will not render the markup to the UI
+        if (!render) return markup;
+        this.clear();
         // now we will clear the parentElement
-        this._parentElement.innerHTML = "";
+        // this._parentElement.innerHTML = '';
         // now we will insert the markup into the parentElement
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    // here we will create a method to update the elements that are changed in the recipe details
+    // this function will still take the state object as a parameter
+    update(data) {
+        this._data = data;
+        // if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
+        // now we will call the generateMarkup method to generate the markup for the recipe details
+        // since the generateMarkup method will return the markup for the recipe details, we will store the markup in a variable
+        const markup = this._generateMarkup();
+        // now we will convert the markup to a virtual DOM object so that we can compare it with the actual DOM object
+        const newDOM = document.createRange().createContextualFragment(markup);
+        // console.log(newDOM);
+        // since we have the node now, we cannot compare it with the actual DOM object
+        // to comapare it with the actual DOM object, we will convert it to array of nodes
+        // we can use Array.from method to convert it to an array of nodes
+        const newElements = Array.from(newDOM.querySelectorAll("*"));
+        const curElements = Array.from(this._parentElement.querySelectorAll("*"));
+        // now we have the array of nodes from both the virtual DOM and the actual DOM
+        // we can now loop through the array of nodes and compare them
+        // we will loop through the newElements array because the newElements array will always have the same length as the curElements array
+        newElements.forEach((newEl, i)=>{
+            const curEl = curElements[i];
+            // update Changed TEXT
+            // here we can use the isEqualNode method to compare the nodes
+            // but we will use the condition to check if the node is not equal to null
+            // if it is not equal to null then we will compare the nodes
+            // nodeValue helps to take the text content of the node
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== "") curEl.textContent = newEl.textContent;
+            // update changed ATTRIBUTES
+            // here we will compare the attributes of the nodes
+            // we will use the attributes property of the node to get the attributes of the node
+            if (!newEl.isEqualNode(curEl)) // console.log(newEl.attributes);
+            // here we are looping through the attributes of the newEl node
+            // and we are setting the attributes of the curEl node to the attributes of the newEl node
+            Array.from(newEl.attributes).forEach((attr)=>{
+                // we are setting the attributes of current element coming from the new element
+                curEl.setAttribute(attr.name, attr.value);
+            });
+        // console.log(curEl, newEl.isEqualNode(curEl));
+        });
     }
     renderSpinner = function() {
         const markup = ` 
@@ -3180,29 +3384,53 @@ var _viewJs = require("./view.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
-if (module.hot) module.hot.accept();
+var _previewViewJs = require("./previewView.js");
+var _previewViewJsDefault = parcelHelpers.interopDefault(_previewViewJs);
+// if (module.hot) {
+//     module.hot.accept();
+// }
 class ResultView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector(".results");
     _errorMessage = "No recipes found for your query! Please try again :)";
     _generateMarkup() {
-        return this._data.map((data)=>this._generateMarkupPreview(data)).join("");
-    }
-    _generateMarkupPreview(result) {
-        return `<li class="preview">
-            <a class="preview__link " href="#${result.id}">
-                <figure class="preview__fig">
-                    <img src="${result.image}" alt="Test" />
-                </figure>
-                <div class="preview__data">
-                    <h4 class="preview__title">${result.title}</h4>
-                    <p class="preview__publisher">${result.publisher}</p>
-
-                </div>
-            </a>
-        </li>`;
+        return this._data.map((result)=>(0, _previewViewJsDefault.default).render(result, false)).join("");
     }
 }
 exports.default = new ResultView();
+
+},{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./previewView.js":"1FDQ6"}],"1FDQ6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewJs = require("./view.js");
+var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+// if (module.hot) {
+//     module.hot.accept();
+// }
+// we are creating a this class which will be the child class of resultView and bookmarksView because they have the same functionality
+class PreviewView extends (0, _viewJsDefault.default) {
+    _parentElement = "";
+    // _parentElement = document.querySelector('.bookmarks__list');
+    // _errorMessage = 'No bookmarks. please select a recipe and bookmark it :)';
+    _generateMarkup() {
+        //we are checking if the result.id is equal to the current id in the url
+        const id = window.location.hash.slice(1);
+        return `<li class="preview ${this._data.id === id ? "preview__link--active" : ""}">
+            <a class="preview__link " href="#${this._data.id} ">
+        <figure class="preview__fig" >
+            <img src="${this._data.image}" alt="${this._data.title}" />
+                </figure >
+    <div class="preview__data">
+        <h4 class="preview__title">${this._data.title}</h4>
+        <p class="preview__publisher">${this._data.publisher}</p>
+
+    </div>
+            </a >
+        </li > `;
+    }
+}
+exports.default = new PreviewView();
 
 },{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6z7bi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -3273,6 +3501,91 @@ class PaginationView extends (0, _viewJsDefault.default) {
     }
 }
 exports.default = new PaginationView();
+
+},{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4Lqzq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewJs = require("./view.js");
+var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+var _previewViewJs = require("./previewView.js");
+var _previewViewJsDefault = parcelHelpers.interopDefault(_previewViewJs);
+// if (module.hot) {
+//     module.hot.accept();
+// }
+class bookmarksView extends (0, _viewJsDefault.default) {
+    _parentElement = document.querySelector(".bookmarks__list");
+    _errorMessage = "No bookmarks. please select a recipe and bookmark it :)";
+    // the function will load the bookmarks from the local storage
+    addHandlerEvent = function(handler) {
+        window.addEventListener("load", handler);
+    };
+    _generateMarkup() {
+        // here we are calling the render method from the previewView instance and passing the bookmark and false as parameters
+        // we are not calling render method from this bookmarksView
+        return this._data.map((bookmark)=>(0, _previewViewJsDefault.default).render(bookmark, false)).join("");
+    }
+}
+exports.default = new bookmarksView();
+
+},{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","./previewView.js":"1FDQ6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i6DNj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewJs = require("./view.js");
+var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+class AddRecipeView extends (0, _viewJsDefault.default) {
+    _parentElement = document.querySelector(".upload");
+    _window = document.querySelector(".add-recipe-window");
+    _overlay = document.querySelector(".overlay");
+    _btnOpen = document.querySelector(".nav__btn--add-recipe");
+    _btnClose = document.querySelector(".btn--close-modal");
+    // we will creat a constructor so that the addHandlerShowWindow function is called as soon as the object is created
+    // we created a constructor because we want to call the function as soon as the object is created
+    constructor(){
+        super(); // because it is a child class of the View class and we need to call the constructor of the parent class so that we can use this keyword
+        this._addHandlerShowWindow();
+        this._addHandlerHideWindow();
+    }
+    toggleWindow() {
+        this._window.classList.toggle("hidden"); //if the window is hidden, it will be shown and vice versa
+        this._overlay.classList.toggle("hidden");
+    }
+    // lets create a function to add the event listener for the form submission
+    addHandlerFormSubmit(handler) {
+        this._parentElement.addEventListener("submit", function(e) {
+            e.preventDefault();
+            // the code below is a new way of getting the form data
+            const dataArr = [
+                ...new FormData(this)
+            ]; // this keyword will point to element that the event listener is attached to
+            // since the form submission is happen asynchoronously behind the scenes,
+            // we will find a way of getting this data to the model through the controller
+            const data = Object.fromEntries(dataArr); // this will convert the dataArr array to an object
+            handler(data);
+        });
+    }
+    // lets create a function to add the event listener to the open button
+    // since we have called this function in the constructor, it will be called as soon as the object is created for this class
+    _addHandlerShowWindow() {
+        this._btnOpen.addEventListener("click", this.toggleWindow.bind(this)); // the this keyword in the bind method will point to the object of the class
+    // this._btnOpen.addEventListener('click', function () {
+    //     // this._window.classList.toggle('hidden'); //if the window is hidden, it will be shown and vice versa
+    //     // this._overlay.classList.toggle('hidden');
+    // })
+    }
+    // lets create a function to add the event listener to the close button
+    // since we have called this function in the constructor, it will be called as soon as the object is created for this class
+    _addHandlerHideWindow() {
+        this._btnClose.addEventListener("click", this.toggleWindow.bind(this));
+        this._overlay.addEventListener("click", this.toggleWindow.bind(this));
+    }
+    // lets create a function to generate the markup for the pagination buttons
+    _generateMarkup() {}
+}
+exports.default = new AddRecipeView();
 
 },{"./view.js":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["f0HGD","aenu9"], "aenu9", "parcelRequire3a11")
 

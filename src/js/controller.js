@@ -9,6 +9,9 @@ import resultView from './views/resultView.js';
 
 import paginationView from './views/paginationView.js';
 
+import bookmarksView from './views/bookmarksView.js';
+
+import addRecipeView from './views/addRecipeView.js';
 
 
 import 'core-js/stable';
@@ -47,9 +50,6 @@ const showRecipe = async function () {
 
     // loading the recipe
     try {
-        // rendering the spinner
-        recipeView.renderSpinner();
-
 
 
 
@@ -61,16 +61,27 @@ const showRecipe = async function () {
         // if there is no id in the url, we return from the function by using the guard clause
         if (!id) return;
 
-        // loading the recipe
+        // 0. update results view to mark selected search result
+        resultView.update(model.getResultsPage());
+
+        //1. rendering the spinner
+        recipeView.renderSpinner();
+
+        // 0. update the view to mark the selected search result
+
+        //2. loading the recipe
         // we are calling the loadRecipe function from the model.js file and passing the id as a parameter
         // since the loadRecipe function is an async function, we can use the await keyword to wait for the promise to be resolved
         await model.loadRecipe(id);
 
-        // rendering the recipe
+        //3. rendering the recipe
         // here we are rendering the recipe to the UI by calling the render method from the recipeView instance
         // and passing the recipe as a parameter
         recipeView.render(model.state.recipe)
 
+        // debugger;
+        //4. updating the bookmarks view
+        bookmarksView.update(model.state.bookmark);
 
 
     }
@@ -80,6 +91,7 @@ const showRecipe = async function () {
         // instead we will set the error message in the view because the error mesasage will be rendered to the UI
         // we will only call the renderError method from the recipeView instance
         recipeView.renderError();
+        console.error(err); // here we are logging the error to the console
     }
 }
 
@@ -89,6 +101,7 @@ const showRecipe = async function () {
 const controlSearchResults = async function () {
     try {
         // get the query from the search input
+
         // 1. get the query from the search input
         const query = searchView.getQuery();
         if (!query) return;
@@ -137,10 +150,78 @@ const controlPagination = function (goToPage) {
 
 }
 
+// here now we will create a handler function for the serving buttons
+// basically this function is to update the servings in the state object in the model
+const controlServings = function (newServings) {
+    // we will not directly update the servings in the state object from the controller
+    // we will create a method in the model to update the servings
+
+    //1. update the recipe servings (in state)
+    model.updateServings(newServings);
+
+    //2. updated the recipe view
+    // if we use the render method in here then it will update the whole page which is not good
+    // so what we can do is to only update the the elements that are changed
+    // recipeView.render(model.state.recipe)
+
+    // we will create this method  in the parent view that is the view.js file
+    recipeView.update(model.state.recipe)
+
+}
+
+// here now we will create a controller function for the bookmark feature
+const controlBookmark = function () {
+    // console.log(!model.state.recipe.bookmarked);
+
+    // 1. add or remove the bookmark
+    // here if the recipe bookmarked property is true, we will add the recipe to the bookmark array in the state object
+    if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+    // if the recipe bookmarked property is false, we will delete the recipe from the bookmark array in the state object by passing the id of the recipe
+    else model.deleteBookmark(model.state.recipe.id);
+
+    // console.log(model.state.recipe);
+
+    // 2. update the recipe view
+    // we need to update the recipe view when the recipe is bookmarked
+    // and we will pass the parameter that needs to be updated
+    recipeView.update(model.state.recipe)
+
+    // 3. render the bookmarks view
+    // we will render the bookmarks view when the recipe is bookmarked
+    // the bookmarked recipe will be rendered on the bookmark panel
+    bookmarksView.render(model.state.bookmark); // here we are passing the bookmark array from the state object in the model to the render method in the bookmarksView instance
+
+}
+
+const controlBookmarks = function () {
+    bookmarksView.render(model.state.bookmark);
+
+}
+
+const controlAddRecipe = async function (newRecipe) {
+    try {
+        // we need to await the upload recipe method because it is an async function and it returns a promise
+        await model.uploadRecipe(newRecipe);
+    }
+    // console.log(newRecipe);
+    catch (err) {
+        console.error('💥', err);
+        addRecipeView.renderError(err.message);
+    }
+
+
+}
+
+// here we are connecting the handler function to the event listener or view
 const init = function () {
     recipeView.addHandlerRender(showRecipe);
+    recipeView.addHandlerUpdateServings(controlServings);
+    recipeView.addHandlerBookmark(controlBookmark);
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
+    bookmarksView.addHandlerEvent(controlBookmarks);
+    addRecipeView.addHandlerFormSubmit(controlAddRecipe);
+    // controlBookmark();
 }
 init();
 // this is the event listener for the hashchange event which is fired when the hash of the url changes
