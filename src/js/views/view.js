@@ -9,6 +9,11 @@ export default class View {
 
   // we will create a method called render that will render the recipe details to the UI
   // the data that will be coming in the render method will be stored in the data of the instance of the class
+  /**
+   * @param {Object | Object[array]} data the data to be rendered to the UI (for eg: recipe) 
+   * @param {boolean} [render = true] if false, create a markup string instead of rendering to the UI
+   * @returns {undefined | string} A markup string is returned if render = false
+   */
   render(data, render = true) {
     this._data = data;
     if (!data || Array.isArray(data) && data.length === 0) return this.renderError();

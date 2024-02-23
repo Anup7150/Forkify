@@ -1,7 +1,8 @@
 import { async } from 'regenerator-runtime';
-import { API_URL, RES_PER_PAGE } from './config.js';
-import { getJSON } from './helpers.js';
+import { API_URL, RES_PER_PAGE, KEY } from './config.js';
+// import { getJSON, sendJSON } from './helpers.js';
 
+import { AJAX } from './helpers.js';
 
 // state is an object that will store all the data that we need to in the application
 // we will store the recipe data in the state object
@@ -18,26 +19,39 @@ export const state = {
     // numberPerPage: 10,
 }
 
+// here we will create an object to create the recipe
+const createRecipeObject = function (data) {
+
+    let { recipe } = data.data;
+    // now we will store the recipe data in the state recipe object
+    // state.recipe = {
+    return {
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        sourceUrl: recipe.source_url,
+        image: recipe.image_url,
+        servings: recipe.servings,
+        cookingTime: recipe.cooking_time,
+        ingredients: recipe.ingredients,
+        // the code below is that if the key exists, we will add the key property to the recipe object, which returns an object and we are using the spread operator to add the key property to the recipe object
+        ...(recipe.key && { key: recipe.key }), // this is a short circuiting and we are using the spread operator to add the key property to the recipe object
+
+    }
+
+    console.log(recipe);
+}
+
 // now we will create a function to get the recipe from the api
 // the function will take the id as a parameter to get the recipe with that id
 export const loadRecipe = async function (id) {
     try {
         // we are fetching the recipe data from the api
-        const data = await getJSON(`${API_URL}${id}`)
+        const data = await AJAX(`${API_URL}${id}?key=${KEY}`)
 
-        let { recipe } = data.data;
-        // now we will store the recipe data in the state recipe object
-        state.recipe = {
-            id: recipe.id,
-            title: recipe.title,
-            publisher: recipe.publisher,
-            sourceUrl: recipe.source_url,
-            image: recipe.image_url,
-            servings: recipe.servings,
-            cookingTime: recipe.cooking_time,
-            ingredients: recipe.ingredients
-
-        }
+        // here we will create an recipe object with the properties we want from the data object we got from the API
+        state.recipe = createRecipeObject(data);
+        console.log(state.recipe);
 
         // here we want to check if the recipe is bookmarked or not
         // we can do that by checking the recipe id that is in the bookmark array with the recipe id in the state object
@@ -67,7 +81,7 @@ export const loadRecipe = async function (id) {
 export const loadSearchResults = async function (query) {
     try {
         state.search.query = query;
-        const data = await getJSON(`${API_URL}?search=${query}`)
+        const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`)
         console.log(data);
         // we will store the data coming from the api in new object and store it in the state object
         state.search.results = data.data.recipes.map(rec => {
@@ -78,6 +92,8 @@ export const loadSearchResults = async function (query) {
                 title: rec.title,
                 publisher: rec.publisher,
                 image: rec.image_url,
+                ...(rec.key && { key: rec.key }),
+
             }
         })
 
@@ -173,7 +189,9 @@ export const uploadRecipe = async function (newRecipe) {
         // converting an oject to an array and then filtering the array with condition
         const ingredients = Object.entries(newRecipe).filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
             .map(ing => {
-                const ingArr = ing[1].replaceAll(' ', '').split(',');
+                const ingArr = ing[1].split(',').map(el => el.trim());
+                // const ingArr = ing[1].replaceAll(' ', '').split(',');
+
                 const [quantity, unit, description] = ingArr;
 
                 // now we will check a conditon
@@ -186,12 +204,34 @@ export const uploadRecipe = async function (newRecipe) {
                     quantity: quantity ? + quantity : null, unit, description
                 }; // 
             });
-        console.log(ingredients);
+
+        // we will create a new object with the properties we want from the newRecipe object
+        // here we are sending in  the same api format as the format that we get from the api
+        const recipe = {
+            title: newRecipe.title,
+            source_url: newRecipe.sourceUrl,
+            image_url: newRecipe.image,
+            publisher: newRecipe.publisher,
+            cooking_time: newRecipe.cookingTime,
+            servings: newRecipe.servings,
+            ingredients,
+        }
+        // console.log(recipe);
+        // now we will send the data to the api
+        const data = await AJAX(`${API_URL}?key=${KEY}`, recipe);
+
+        // here we will create an object of recipe so that we can store the data in the state object
+        state.recipe = createRecipeObject(data);
+        // now adding the bookmark to the recipe that we uploaded, we can use the addBookmark function
+        addBookmark(state.recipe);
+        // console.log(data);
+
     } catch (err) {
         // console.error('💣💣💣💣💣', err);
         throw err;
     }
 }
+
 
 // now here we will create a function to read the bookmarked recipe from the local storage
 const init = function () {

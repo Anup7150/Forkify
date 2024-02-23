@@ -13,6 +13,8 @@ import bookmarksView from './views/bookmarksView.js';
 
 import addRecipeView from './views/addRecipeView.js';
 
+import { MODAL_CLOSE_SEC } from './config.js';
+
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -179,6 +181,7 @@ const controlBookmark = function () {
     // if the recipe bookmarked property is false, we will delete the recipe from the bookmark array in the state object by passing the id of the recipe
     else model.deleteBookmark(model.state.recipe.id);
 
+
     // console.log(model.state.recipe);
 
     // 2. update the recipe view
@@ -191,17 +194,51 @@ const controlBookmark = function () {
     // the bookmarked recipe will be rendered on the bookmark panel
     bookmarksView.render(model.state.bookmark); // here we are passing the bookmark array from the state object in the model to the render method in the bookmarksView instance
 
+
 }
 
 const controlBookmarks = function () {
     bookmarksView.render(model.state.bookmark);
 
+
 }
 
 const controlAddRecipe = async function (newRecipe) {
     try {
+
+        // add spinner
+        addRecipeView.renderSpinner();
+
+        // 1. upload the new recipe data
         // we need to await the upload recipe method because it is an async function and it returns a promise
         await model.uploadRecipe(newRecipe);
+        console.log(model.state.recipe);
+
+
+        // // 2. close the form window
+        // addRecipeView.toggleWindow();
+
+        // 2. render the success message
+        addRecipeView.renderMessage();
+
+        // 3. render the message   
+        setTimeout(function () {
+            addRecipeView.toggleWindow();
+        }, MODAL_CLOSE_SEC * 1000);
+
+
+        // 3. render the recipe
+        recipeView.render(model.state.recipe);
+
+        // 4. render the bookmark view because when we bookmark our recipe we want it to be rendered in the bookmark panel
+        bookmarksView.render(model.state.bookmark);
+        console.log(model.state.bookmark);
+        //5. change the id in the url
+        // we want to change the id in the url when we bookmark a recipe and that recipe is loaded in the recipe View
+        // we can use the history API to change the id in the url
+        window.history.pushState(null, '', `#${model.state.recipe.id}`);
+
+
     }
     // console.log(newRecipe);
     catch (err) {

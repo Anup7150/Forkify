@@ -7,6 +7,7 @@ class AddRecipeView extends View {
     _overlay = document.querySelector('.overlay');
     _btnOpen = document.querySelector('.nav__btn--add-recipe');
     _btnClose = document.querySelector('.btn--close-modal');
+    _message = 'Recipe was successfully uploaded';
 
     // we will creat a constructor so that the addHandlerShowWindow function is called as soon as the object is created
     // we created a constructor because we want to call the function as soon as the object is created
