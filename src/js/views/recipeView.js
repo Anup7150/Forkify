@@ -4,7 +4,8 @@ import View from './view.js'
 //import icon from '../img/icons.svg'; // Parcel 1
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 // var Fraction = require('fractional').Fraction // old way of importing
-import { Fraction } from 'fractional';
+import fracty from "fracty";
+// import { Fraction } from 'fractional';
 // console.log(Fraction);
 
 // in the recipeView.js file, we will create a class called RecipeView that will be responsible for rendering the recipe details to the UI.
@@ -108,6 +109,20 @@ class recipeView extends View {
           </svg>
         </a>
       </div>`;
+  }
+
+
+  _generateMarkupIngredient(ing) {
+    return `<li class="recipe__ingredient">
+                    <svg class="recipe__icon">
+                        <use href="${icons}#icon-check"></use>
+                    </svg>
+                    <div class="recipe__quantity">${ing.quantity ? fracty(ing.quantity).toString() : ''}</div>
+                    <div class="recipe__description">
+                        <span class="recipe__unit">${ing.unit}</span>
+                        ${ing.description}
+                    </div>
+                </li>`
   }
 
   // we are creating a publisher-subscriber pattern here
