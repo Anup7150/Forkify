@@ -1,4 +1,4 @@
-9699
+9695
 148C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo\matches.js133519496674141208 0
 130C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\syntax\node\SelectorList.cjs133519496675098873 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\iterator\drop.js133520526127941457 0
@@ -20,7 +20,7 @@
 129C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\syntax\config\generator.cjs133519496670228596 0
 69C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\.prettierrc133519055113618009 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-regexp.js133520526157131926 0
-70C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\package.json133532001944383759 0
+70C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\package.json133532586923000923 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\escape-string-regexp\readme.md133519496660118198 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lz4\lib\liblz4.pc.in133519496676307881 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\create-property-descriptor.js133520526125949937 0
@@ -30,7 +30,7 @@
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\web.clear-immediate.js133520526193517843 0
 94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\types\package.json133519496659375840 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_to_property_key.mjs133519496683609991 0
-88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@msgpackr-extract133521407889738342 1
+88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@msgpackr-extract133532037259375386 1
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\electron-to-chromium\chromium-versions.js133519496658924517 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\instance\find-last-index.js133520526142714988 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\postcss-value-parser\README.md133519496663182601 0
@@ -41,7 +41,7 @@
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\is-iterable.js133520526156853152 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map\lib\binary-search.js133519496663252702 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_ts_metadata.mjs133519496683643730 0
-75C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\package-lock.json133521407892415867 0
+75C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\package-lock.json133532037261948030 0
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\normalize-path\LICENSE133519499085722000 0
 94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\lib\replace\atrule133519496673762458 1
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\update-browserslist-db133519496662805250 1
@@ -63,7 +63,7 @@
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\diagnostic\test\markdown.test.js133519496661864311 0
 77C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\srcset133519496660832514 1
 81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map133519496666104835 1
-62C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist133532002637940442 1
+62C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist133532592133452910 1
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\entities\lib\encode-trie.d.ts.map133519496666462187 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\entities\lib\maps\legacy.json133519496664719174 0
 88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\svgo\lib\style.js133519496667144073 0
@@ -83,7 +83,7 @@
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\term-size\package.json133519496663210729 0
 145C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\convertShapeToPath.js133519496667195322 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\number\is-nan.js133520526156984635 0
-70C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules133528337720303764 1
+70C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules133532037260093297 1
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\esm\_class_private_method_init.js133519496676023044 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\virtual\repeat.js133520526170154761 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\object\group-by.js133520526148673929 0
@@ -93,7 +93,7 @@
 79C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\argparse133519496663509264 1
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\typed-array\includes.js133520526150188850 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map\dist\source-map.min.js.map133519496668681834 0
-73C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\model.js133531723106480143 0
+73C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\model.js133532036037355631 0
 132C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\package-manager\test\fixtures\has-a-not-yet-installed133519496669735661 1
 90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\number133520526181802408 1
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\well-known-symbol.js133520526194513762 0
@@ -193,6 +193,7 @@
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_class_private_field_loose_base133519496679680049 1
 131C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\keyboardevent-getmodifierstate.js133519496684396305 0
 79C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\sass\_recipe.scss133519052736597248 0
+80C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.2d794cf7.js133532592133335977 0
 132C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\clean\Raw.js133519496670178552 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\semver\internal\constants.js133519496664057052 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\array\group-by-to-map.js133520526148365221 0
@@ -204,11 +205,11 @@
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\svgo\plugins\removeDesc.js133519496672552705 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\array\join.js133520526160143522 0
 83C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\sass\sass.js133519499087840643 0
+109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@mischnic\json-sourcemap\dist\index.js133519496661513046 0
+109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\syntax\node\StyleSheet.js133519496680288556 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\input-placeholder.js133519496683943964 0
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\syntax\node\UnicodeRange.js133519496680504197 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\typed-array\to-sorted.js133520526183348992 0
-109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@mischnic\json-sourcemap\dist\index.js133519496661513046 0
-109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\syntax\node\StyleSheet.js133519496680288556 0
 80C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\sass\_preview.scss133519052536770237 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.typed-array.slice.js133520526135690190 0
 126C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\sample-bdb.txt133519496677384523 0
@@ -300,12 +301,12 @@
 92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\import-fresh\index.js133519496658659330 0
 88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\node_modules133519496641950032 1
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.typed-array.join.js133520526135494810 0
-84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\views\recipeView.js133531708772031674 0
+84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\views\recipeView.js133532590168428371 0
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.last-index-of.js133520526131008574 0
 123C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\react-refresh\cjs\react-refresh-babel.development.js133519496659746866 0
 89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\chrome-trace-event133519496662566929 1
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\sass\types\value\function.d.ts133519499088234908 0
-78C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\views\view.js133531737063933270 0
+78C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\src\js\views\view.js133532025428143904 0
 88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\srcset\index.d.ts133519496661011674 0
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\term-size\vendor\macos133519496660436815 1
 147C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\build-test.js133519496659482861 0
@@ -327,7 +328,7 @@
 88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\is-number\LICENSE133519496659307984 0
 122C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_class_apply_descriptor_update.mjs133519496682390002 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist\loaders.js133519496661986548 0
-89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\.package-lock.json133521407893879989 0
+89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\.package-lock.json133532037263004150 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\virtual\italics.js133520526158646878 0
 128C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\definition-syntax\parse.js133519496679626933 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\symbol\async-dispose.js133520526120000589 0
@@ -350,7 +351,7 @@
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\chacha8.c133519496668711293 0
 105C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\array\virtual\some.js133520526176902156 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\regions\NR.js133519496685819519 0
-76C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@lmdb133521407889670658 1
+76C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@lmdb133532037259436420 1
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\lexer\structure.cjs133519496675403634 0
 123C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-select\lib\esm\pseudo-selectors\filters.d.ts.map133519496669755816 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\svgo\plugins\removeDimensions.js133519496672613270 0
@@ -363,11 +364,11 @@
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\regions\CU.js133519496680521681 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\esnext.map.find-key.js133520526137655915 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\esnext.map.every.js133520526137616250 0
-78C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel133528337863084877 1
+78C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel133532037259375386 1
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-what\lib\es\types.d.ts133519496668004482 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\regexp\search.js133520526173380696 0
 79C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\domutils133519496666319006 1
-75C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc133521407889670658 1
+75C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc133532037259375386 1
 124C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\object\get-own-property-descriptors.js133520526147573761 0
 94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map\CHANGELOG.md133519496665761517 0
 119C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-select\lib\pseudo-selectors\aliases.d.ts.map133519496668248481 0
@@ -380,7 +381,6 @@
 113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\function\virtual\index.js133520526152998276 0
 94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\dotenv-expand\README.md133519496661036763 0
 116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\input-selection.js133519496684003296 0
-90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\index.js133521407888986384 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\lib\modules\custom.cjs133519496662551515 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\regions\DM.js133519496681013600 0
 89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\utility-types\dist133519496666802756 1
@@ -557,8 +557,10 @@
 87C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist133519496668469250 1
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\runtime-react-refresh133519496660467618 1
 87C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\semver\range.bnf133519496658716679 0
-81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional133521407889076747 1
-107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg\package.json133519496663831370 0
+128C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\node-releases\data\release-schedule\release-schedule.json133519496661437504 0
+93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\picomatch\lib\parse.js133519496660805234 0
+103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\map-iterate.js133520526162302663 0
+77C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty133532022261185928 1
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\math-sign.js133520526164190672 0
 91C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\semver\bin\semver.js133519496669943564 0
 138C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\lexer\index.js133519496672846265 0
@@ -1080,8 +1082,8 @@
 129C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\lexer\generic-an-plus-b.cjs133519496670350476 0
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\symbol\match.js133520526163874797 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\instance\trim-start.js133520526188402492 0
-120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\ServerReporter.js133519496667240239 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\utility-types\dist\index.js133519496660426036 0
+120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\ServerReporter.js133519496667240239 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\syntax133519496672362071 1
 95C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\string\sup.js133520526180225895 0
 96C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\semver\functions\minor.js133519496668158096 0
@@ -1217,9 +1219,8 @@
 96C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\svgo\plugins\prefixIds.js133519496672082990 0
 123C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\prefers-reduced-motion.js133519496686466538 0
 122C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\check-correctness-of-iteration.js133520526122937737 0
-106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\type-fest\source\literal-union.d.ts133519496666922443 0
-106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\releases\fraction-0.1.js133521407889278087 0
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\lib\modules\removeAttributeQuotes.cjs133519496667277594 0
+106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\type-fest\source\literal-union.d.ts133519496666922443 0
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\types\package.json133519496661835225 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\svgo\plugins\convertEllipseToCircle.js133519496670722324 0
 119C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\walker\create.cjs133519496668248481 0
@@ -1688,6 +1689,8 @@
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_define_enumerable_properties.mjs133519496682893859 0
 125C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\cjs\syntax\pseudo\index.cjs133519496672439061 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\supports-color\package.json133519496660168970 0
+100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\instance\at.js133520526120430835 0
+92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty\.gitattributes133532022261009405 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map\dist\source-map.js133519496667568256 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\flow.js133519496664734152 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.object.assign.js133520526132461241 0
@@ -1778,11 +1781,11 @@
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\weak-map\index.js133520526152119255 0
 149C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeAttributesBySelector.js133519496670178552 0
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\semver\ranges\valid.js133519496670587525 0
-100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\entities\lib\encode-trie.d.ts133519496667812348 0
-109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\syntax\node\WhiteSpace.js133519496680711219 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\source-map\lib\quick-sort.js133519496664020237 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\resolver-default\lib133519496658751254 1
 107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\symbol\description.js133520526127228649 0
+109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\syntax\node\WhiteSpace.js133519496680711219 0
+100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\entities\lib\encode-trie.d.ts133519496667812348 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-cli\src\emoji.js133519496664586560 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlparser2\lib\WritableStream.d.ts.map133519496664719174 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\iterate.js133520526158845748 0
@@ -2172,9 +2175,6 @@
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\immutable\dist\immutable.min.js133519499087400064 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\map\some.js133520526176837783 0
 89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\is-extglob\LICENSE133519496659351873 0
-128C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\node-releases\data\release-schedule\release-schedule.json133519496661437504 0
-93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\picomatch\lib\parse.js133519496660805234 0
-103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\map-iterate.js133520526162302663 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\nth-check\lib\esm\package.json133519496663169406 0
 107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\src\jsx.js133519496665517875 0
 165C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\core\test\fixtures\local-plugin-config-pkg\node_modules\parcel-config-local\index.json133519496678552323 0
@@ -2751,13 +2751,12 @@
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lz4\lib\lz4file.h133519496675742211 0
 119C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\css-color-function.js133519496676960797 0
 123C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_class_private_field_loose_base.mjs133519496682563954 0
-107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c133519496669643081 0
-94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg133519496663744416 1
-94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\package.json133521407888324990 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\lib\presets\safe.cjs133519496668248481 0
 139C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-js\node_modules\regenerator-runtime\package.json133520526117265336 0
 138C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\core\test\fixtures\targets-default-distdir-one\package.json133519496679680049 0
 124C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\esnext.set.symmetric-difference.v2.js133520526139254107 0
+107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c133519496669643081 0
+94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg133519496663744416 1
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\proposals\symbol-description.js133520526180432554 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lz4\lib\lz4hc.h133519496675892573 0
 140C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeUselessDefs.js133519496672241744 0
@@ -2771,6 +2770,7 @@
 119C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb133519496677404355 1
 137C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\Number.js133519496669929393 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.number.to-exponential.js133520526132405333 0
+84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.2d794cf7.js.map133532592133452910 0
 90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\callsites\readme.md133519496660970676 0
 119C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-select\lib\esm\pseudo-selectors\filters.d.ts133519496673364150 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\cjs\restructure\1-mergeAtrule.cjs133519496659030210 0
@@ -2778,7 +2778,6 @@
 139C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\function133519496676637013 1
 127C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\CHANGES133519496658744544 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\async-iterator.js133520526120348424 0
-90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\releases133521407889278087 1
 128C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\Doxyfile133519496662583799 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\regexp\flags.js133520526143824669 0
 127C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\LICENSE133519496663913800 0
@@ -3111,9 +3110,6 @@
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlparser2\lib\FeedHandler.d.ts133519496665253087 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlparser2\lib\index.d.ts.map133519496663794045 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\utils\url.js133519496680373619 0
-113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.object.define-getter.js133520526132512010 0
-90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\tests.js133521407889031788 0
-94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\types\unsafe.js133519496661051924 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlparser2\lib\Parser.d.ts.map133519496664119518 0
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs\netlify.toml133519496675329687 0
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\get-iterator-direct.js133520526146884217 0
@@ -3134,9 +3130,6 @@
 84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs133519496675329687 1
 105C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.filter.js133520526130741969 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\typed-array\of.js133520526165854929 0
-108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-big-int-array.js133520526155835671 0
-106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\releases\fraction-0.2.js133521407889516649 0
-116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_iterable_to_array_limit_loose133519496680838573 1
 89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\index.cjs133519496664734152 0
 145C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\atrule\page.js133519496675198474 0
 123C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace133519496671144594 1
@@ -3277,7 +3270,6 @@
 113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-select\node_modules\domhandler\LICENSE133519496658037386 0
 128C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\050-modules.md133519496672689474 0
 131C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\060-contribute.md133519496672981760 0
-97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\array_mixins.js133521407888885132 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs\docs\030-config.md133519496672034014 0
 137C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\atrule133519496676081886 1
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\htmlnano\docs\docs\040-presets.md133519496672324092 0
@@ -3320,12 +3312,18 @@
 133C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\sort.js133519496664691689 0
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\lib\utils\create-custom-error.js133519496677259618 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\regions\FO.js133519496682258144 0
-92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\index.html133521407889062525 0
-107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\jsx.js133519496665201058 0
-91C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fractional\README.md133521407888852640 0
-116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-tracer\lib\TracerReporter.js133519496658990276 0
-106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_non_iterable_spread133519496681013600 1
-112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-posthtml\package.json133519496662195943 0
+97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\array\splice.js133520526177588946 0
+98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\weak-map\of.js133520526165808815 0
+127C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\MediaQuery.js133519496679258692 0
+87C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty\fracty.js133532022261099327 0
+93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cli-progress\README.md133519496659565970 0
+111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\node\index-parse.cjs133519496672054105 0
+89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\commander\index.js133519496659438371 0
+102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\iterator.js133520526159950202 0
+92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty\fracty.test.js133532022261159060 0
+90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty\package.json133532022261009405 0
+109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.find-index.js133520526130741969 0
+87C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fracty\readme.md133532022261185928 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\core\test\fixtures\module-b.js133519496674941249 0
 90C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\fill-range\index.js133519496658653918 0
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\raw.js133520526168618020 0
@@ -3739,9 +3737,6 @@
 129C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\MediaFeature.js133519496679187879 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\set\from.js133520526146181166 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\dist\lib\statuses.js133519496687556270 0
-97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\es\array\splice.js133520526177588946 0
-98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\weak-map\of.js133520526165808815 0
-127C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\MediaQuery.js133519496679258692 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\date\get-year.js133520526148148693 0
 120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\Nth.js133519496679446231 0
 127C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\csso\node_modules\css-tree\lib\syntax\node\Percentage.js133519496679720708 0
@@ -4280,8 +4275,8 @@
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\tokenizer\OffsetToLocation.cjs133519496674628959 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\tokenizer\types.cjs133519496676081886 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_array_with_holes.mjs133519496682014681 0
-99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\function133519496676475467 1
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\cooked.js133520526125271999 0
+99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\function133519496676475467 1
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.string.substr.js133520526134425128 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\index.cjs133519496672732396 0
 96C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\scope133519496676431416 1
@@ -4314,9 +4309,6 @@
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-html\lib133519496662206172 1
 120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\node\index-parse-selector.cjs133519496671971052 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\symbol\is-registered-symbol.js133520526157150914 0
-93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cli-progress\README.md133519496659565970 0
-111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\node\index-parse.cjs133519496672054105 0
-89C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\commander\index.js133519496659438371 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\node\MediaQuery.cjs133519496674069901 0
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.date.to-gmt-string.js133520526131457686 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\css-tree\cjs\syntax\node\MediaQueryList.cjs133519496674126138 0
@@ -4793,6 +4785,7 @@
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\source-map\dist\node.js133519496664119518 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist\index.d.ts.map133519496665670783 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist\index.js.map133519496665915235 0
+116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\types.js.flow133519496658990276 0
 124C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\structured-clone-proper-transfer.js133520526179706450 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist\loaders.d.ts133519496668208704 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\cosmiconfig\dist\loaders.d.ts.map133519496666152796 0
@@ -5027,6 +5020,7 @@
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\string\virtual\blink.js133520526121796649 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\an-object-or-undefined.js133520526117922546 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\string\virtual\bold.js133520526121940837 0
+103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\ends-with.js133520526128502483 0
 141C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeStyleElement.js133519496671855909 0
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\stable\string\virtual\code-point-at.js133520526123658521 0
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\map\index.js133520526153051481 0
@@ -5382,7 +5376,6 @@
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\dom-exception\constructor.js133520526125080296 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.every.js133520526130705093 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.fill.js133520526130705093 0
-109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.find-index.js133520526130741969 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.array.find-last-index.js133520526130762079 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\to-offset.js133520526181694084 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.typed-array.float64-array.js133520526135288817 0
@@ -5466,6 +5459,8 @@
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\typed-array\keys.js133520526161091805 0
 107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\native-raw-json.js133520526164644605 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.number.parse-int.js133520526132379293 0
+113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.object.define-getter.js133520526132512010 0
+94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\types\unsafe.js133519496661051924 0
 150C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\DeclarationList.js133519496670267705 0
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.object.define-properties.js133520526132522215 0
 113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\modules\es.object.define-setter.js133520526132721634 0
@@ -5787,8 +5782,8 @@
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\array-last-index-of.js133520526119446265 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\array-sort.js133520526119580686 0
 120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\object\get-own-property-names.js133520526147713270 0
-109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\engine-v8-version.js133520526128705527 0
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\fixed.js133520526143749824 0
+109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\engine-v8-version.js133520526128705527 0
 117C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\array-species-constructor.js133520526119585926 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\iterator\index.js133520526153783675 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\regions\GE.js133519496682722289 0
@@ -5860,6 +5855,8 @@
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\internal-state.js133520526155539143 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\caniuse-lite\data\features\input-file-accept.js133519496683820047 0
 116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-array-iterator-method.js133520526155593288 0
+108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-big-int-array.js133520526155835671 0
+116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_iterable_to_array_limit_loose133519496680838573 1
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-forced.js133520526156649094 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\utils\src\stream.js133519496673420288 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\internals\is-integral-number.js133520526156796267 0
@@ -6042,7 +6039,6 @@
 99C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\index.js133520526154017787 0
 101C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\array\filter.js133520526141604903 0
 114C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\is-well-known-symbol.js133520526158191172 0
-102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\iterator.js133520526159950202 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\metadata-key.js133520526164342729 0
 96C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\cjs\_jsx.cjs133519496671920482 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\symbol\metadata.js133520526164407375 0
@@ -6058,7 +6054,6 @@
 100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\dedent.js133520526126205373 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\instance\flags.js133520526143814427 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-json\LICENSE133519496657968168 0
-103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\ends-with.js133520526128502483 0
 103C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\fontcolor.js133520526144923904 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\full\string\is-well-formed.js133520526158102759 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\object\iterate-keys.js133520526158731545 0
@@ -6545,7 +6540,7 @@
 105C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\array\group-by.js133520526148641997 0
 91C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\url133520526181535580 1
 107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\weak-set\add-all.js133520526117614020 0
-81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.628a78b8.css133532002637827113 0
+81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.628a78b8.css133532592133330763 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\weak-set\delete-all.js133520526126880602 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\weak-set\from.js133520526146239471 0
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\features\weak-map\delete-all.js133520526126830499 0
@@ -7586,7 +7581,6 @@
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\iterator\reduce.js133520526169282826 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\iterator\to-async.js133520526180919745 0
 106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\instance\for-each.js133520526145184058 0
-100C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\instance\at.js133520526120430835 0
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_async_to_generator.mjs133519496682258144 0
 91C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\profiler\lib133519496666419890 1
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\core-js\actual\instance\code-point-at.js133520526123331798 0
@@ -8334,6 +8328,9 @@
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_iterable_to_array_limit133519496680851950 1
 140C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\clean\Declaration.js133519496668660583 0
 104C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_non_iterable_rest133519496680992589 1
+116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-tracer\lib\TracerReporter.js133519496658990276 0
+106C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_non_iterable_spread133519496681013600 1
+112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-posthtml\package.json133519496662195943 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\utils\src\bundle-url.js133519496663458270 0
 113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\_\_object_destructuring_empty133519496681026578 1
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@swc\helpers\src\_array_without_holes.mjs133519496682097981 0
@@ -8638,6 +8635,7 @@
 97C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\utils\lib\index.js133519496670921009 0
 93C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\types\index.js133519496660246939 0
 88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\types\lib133519496663458270 1
+107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg\package.json133519496663831370 0
 120C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg\test\parseFuncIRI.test.js133519496662462013 0
 135C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\data\patch.json133519496676833060 0
 108C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-svg\lib\inline.js133519496660832514 0
@@ -8683,6 +8681,7 @@
 111C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\optimizer-svgo\node_modules\svgo133519496674156813 1
 110C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\config.js133519496663458270 0
 113C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\constants.js133519496664149114 0
+107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\jsx.js133519496665201058 0
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\remapAstLocations.js133519496665799614 0
 109C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\transformer-babel\lib\types.js133519496666265703 0
 94C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\source-map\dist133519496666668376 1
@@ -8745,7 +8744,6 @@
 115C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\HMRServer.js133519496661670170 0
 118C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\serverErrors.js133519496663014574 0
 112C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\templates133519496660492958 1
-116C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\types.js.flow133519496658990276 0
 107C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\config-default\test\.babelrc133519496658130213 0
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\templates\404.html133519496659864325 0
 121C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\@parcel\reporter-dev-server\src\templates\500.html133519496660681990 0
@@ -9689,12 +9687,10 @@
 84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\.bin\svgo.cmd133519496692711956 0
 98C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\.bin\update-browserslist-db133519496692701719 0
 102C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\node_modules\.bin\update-browserslist-db.cmd133519496692701719 0
-83C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\favicon.42656662.png133532002616490621 0
-81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\icons.c14567a0.svg133532002635867310 0
-80C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.12802b47.js133532002637843253 0
-84C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.12802b47.js.map133532002637940442 0
-85C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.628a78b8.css.map133532002637930063 0
-73C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.html133532002637827113 0
-88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.runtime.5a29b290.js133532002637827113 0
-92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.runtime.5a29b290.js.map133532002637930063 0
-80C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\logo.833dfef5.png133532002630274578 0
+83C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\favicon.42656662.png133532592118138733 0
+81C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\icons.c14567a0.svg133532592131447783 0
+85C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.628a78b8.css.map133532592133452910 0
+73C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.html133532592133315317 0
+88C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.runtime.993e4dc4.js133532592133335977 0
+92C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\index.runtime.993e4dc4.js.map133532592133452910 0
+80C:\Users\anoop\OneDrive\Desktop\VScode\javaScript\Forkify\dist\logo.833dfef5.png133532592124661038 0

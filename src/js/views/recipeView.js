@@ -4,7 +4,7 @@ import View from './view.js'
 //import icon from '../img/icons.svg'; // Parcel 1
 import icons from 'url:../../img/icons.svg'; // Parcel 2
 // var Fraction = require('fractional').Fraction // old way of importing
-import fracty from "fracty";
+import fracty from 'fracty';
 // import { Fraction } from 'fractional';
 // console.log(Fraction);
 

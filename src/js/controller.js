@@ -258,6 +258,7 @@ const init = function () {
     paginationView.addHandlerClick(controlPagination);
     bookmarksView.addHandlerEvent(controlBookmarks);
     addRecipeView.addHandlerFormSubmit(controlAddRecipe);
+    console.log('Welcome to the application');
     // controlBookmark();
 }
 init();
